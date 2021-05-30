@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="clientApp\src\app\Models\member.ts" />
+    <None Remove="clientApp\src\app\Models\message.ts" />
+    <None Remove="clientApp\src\app\Models\pagination.ts" />
+    <None Remove="clientApp\src\app\Models\Photo.ts" />
+    <None Remove="clientApp\src\app\Models\user.ts" />
+    <None Remove="clientApp\src\app\Models\userParams.ts" />
+    <None Remove="clientApp\src\app\_resolvers\member-detailed.resolver.ts" />
+    <None Remove="clientApp\src\app\_services\paginationHelper.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="CloudinaryDotNet" Version="1.11.0" />
+    <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="clientApp\src\app\errors\" />
+    <Folder Include="clientApp\src\app\admin\" />
+    <Folder Include="clientApp\src\app\modals\" />
+    <Folder Include="clientApp\src\app\_directives\" />
+    <Folder Include="clientApp\src\app\_forms\" />
+    <Folder Include="clientApp\src\app\_interceptors\" />
+    <Folder Include="clientApp\src\app\_modules\" />
+    <Folder Include="clientApp\src\app\_guards\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="clientApp\src\app\Models\member.ts" />
+    <TypeScriptCompile Include="clientApp\src\app\Models\message.ts" />
+    <TypeScriptCompile Include="clientApp\src\app\Models\pagination.ts" />
+    <TypeScriptCompile Include="clientApp\src\app\Models\photo.ts" />
+    <TypeScriptCompile Include="clientApp\src\app\Models\User.ts" />
+    <TypeScriptCompile Include="clientApp\src\app\Models\userParams.ts" />
+    <TypeScriptCompile Include="clientApp\src\app\_resolvers\member-detailed.resolver.ts" />
+    <TypeScriptCompile Include="clientApp\src\app\_services\paginationHelper.ts" />
+  </ItemGroup>
+
+</Project>
